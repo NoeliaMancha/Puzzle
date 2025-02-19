@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+}
+
+#piezas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: auto;
+    justify-content: center;
+}
+
+#puzzle {
+    border: 2px solid rgb(198, 16, 211);
+    width: 318px;
+    height: 495px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.pieza {
+    width: 106px;
+    height: 165px;
+    background-size: cover;
+    margin: 10px;
+}
+
+.placeholder {
+    background-color: rgba(230, 123, 205);
+    outline: 2px solid rgb(198, 16, 211);
+    width: 106px;
+    height: 165px;
+    transition: 1s;
+}
+
+.placeholder.hover {
+    background-color: rgb(198, 16, 211);
+}
+
+.placeholder .pieza {
+    margin: 0;
+}
+
+#mensaje {
+    text-align: center;
+    display: none;
+    font-size: 3em;
+    color: rgb(112, 58, 116);
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 4px rgb(240, 167, 239);
+}
+
+.ganaste {
+    background-color: rgba(230, 123, 205);
+}
+
+.ganaste #mensaje {
+    display: block;
+}
+
+.ganaste .placeholder {
+    outline: none;
+}
+
+.ganaste #piezas {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#botonVolver {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none;
+    border-color: 7px solid rgb(198, 16, 211);
+    border-radius: 10px;
+    color: rgb(198, 16, 211);
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: rgba(230, 123, 205);
+
+}
+
+#botonVolver:hover {
+    background-color: rgb(240, 167, 239);
+    color: rgb(198, 16, 211);
+}
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 123, 205);
+    color: rgb(226, 126, 126);
+    text-align: center;
+    z-index: 1000;
+}
+
+.parrafoPantalla{
+    margin-top: 0;
+    font-size: 3em;
+    color: rgb(112, 58, 116);
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 4px rgb(240, 167, 239);
+    display: block;
+    z-index: 1001;
+    position: relative;
+}
+
+.iniciar {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color:rgba(230, 123, 205);
+    color: rgb(198, 16, 211);
+    border: 7px solid rgb(198, 16, 211);
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.iniciar:hover {
+    background-color: rgb(240, 167, 239);
+    color: rgb(198, 16, 211);
+}
+
